@@ -6,3 +6,5 @@
 ![block_diagram](https://github.com/Skitter-JP/Light_Dimmer/blob/main/Images/Block-diagram.png?raw=true "Figure")
 
 ![v_mod](https://github.com/Skitter-JP/Light_Dimmer/blob/main/Images/voltage_regulator_mod.JPG?raw=true){:height="50%" width="50%"}
+
+<img src="https://github.com/Skitter-JP/Light_Dimmer/blob/main/Images/voltage_regulator_mod.JPG" width="100" height="100">
