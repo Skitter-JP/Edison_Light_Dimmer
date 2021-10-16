@@ -1,6 +1,6 @@
 # Light_Dimmer
 
-![dimming_gif](https://github.com/Skitter-JP/Light_Dimmer/blob/main/Images/dimmer.gif?raw=true "Figure" | width=100)
+![dimming_gif](https://github.com/Skitter-JP/Light_Dimmer/blob/main/Images/dimmer.gif?raw=true "Figure")
 
 
 ![block_diagram](https://github.com/Skitter-JP/Light_Dimmer/blob/main/Images/Block-diagram.png?raw=true "Figure")
