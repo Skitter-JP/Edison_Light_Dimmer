@@ -1,6 +1,6 @@
 # Edison Light Dimmer
 
-<img src="/Images/dimmer.gif" width=40%>
+<img src="/Images/dimmer.gif" width=40% transform: rotate(20deg)>
 
 
 ![block_diagram](https://github.com/Skitter-JP/Light_Dimmer/blob/main/Images/Block-diagram.png?raw=true "Figure")
