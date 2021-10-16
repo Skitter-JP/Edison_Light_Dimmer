@@ -4,4 +4,4 @@
 
 <img src="/Images/Block-diagram.png" width=30%>
 
-<img src="/Images/voltage_regulator_mod.JPG" width=30%>
+<img src="/Images/voltage_regulator_mod.JPG" width=40%>
