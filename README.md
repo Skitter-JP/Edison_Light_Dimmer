@@ -2,6 +2,8 @@
 
 <img src="/Images/dimmer.gif" width=60%>
 
+<img src="/Images/Block-diagram.png" width=60%>
+
 
 ![block_diagram](https://github.com/Skitter-JP/Light_Dimmer/blob/main/Images/Block-diagram.png?raw=true "Figure")
 
