@@ -1,9 +1,9 @@
 # Edison Light Dimmer
 
-<img src="/Images/Control_via_Ipad.gif" align="right"
-     alt="Dimmer GIF" width=30% height=30% >
-
 In this project I have designed a dual trailing edge phase dimmer using a Triac as the main switching component. 
+
+<img src="/Images/Control_via_Ipad.gif" align="right"
+     alt="Dimmer GIF" width=30% height=10% >
 
 This device has 3 microcontrollers.
 
@@ -11,13 +11,24 @@ This device has 3 microcontrollers.
 2. An Arduino Nano considered as the "Sensor" controller. It collects all the recorded temperatures in the Light Dimmer, it also captures the consumed current of the deivce and pushed these values to the ESP8266.
 3.  Another Arduino Nano considered as the "Triac" controller. It recieves a Zero-Cross signal and then calcualtes the trigger times for each Triac based of the desiered power.
 
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+
 All 3 controllers are interconnected via I2C.
 
-## The ESP8266
+## uController PCB
 
-## The Sensor uController
+## Triac PCB
 
-## The Triac uController
+## Power Control PCB
 
 
 Notes:
@@ -38,7 +49,7 @@ While browing a local elecrtronics store in their "kits" sections I found a "spe
 
 
 
-<img src="/Images/dimmer.gif" width=60%>
+<img src="/Images/Control_via_Ipad.gif" width=60%>
 
 <img src="/Images/Block-diagram.png" width=30%>
 
