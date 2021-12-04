@@ -1,7 +1,7 @@
 # Edison Light Dimmer
 
 <img src="/Images/Light_Dimmer_Gif.gif" align="right"
-     alt="Dimmer GIF" width=50% height=50% >
+     alt="Dimmer GIF" width=30% height=30% >
 
 In this project I have designed a dual trailing edge phase dimmer using a Triac as the main switching component. 
 
