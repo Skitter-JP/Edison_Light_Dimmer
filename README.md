@@ -37,6 +37,8 @@ All 3 controllers are interconnected via I2C.
 
 ## Power Control PCB
 
+<img src="/Images/IMG_0294.JPG" width=55%>
+
 
 Notes:
 
