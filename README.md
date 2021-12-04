@@ -1,6 +1,16 @@
 # Edison Light Dimmer
 
-In this project I have designed a dual trailing edge phase dimmer using a Triac as the main switching component. 
+In this project I have designed a dual trailing edge phase dimmer using a Triac as the main switching component.
+
+Oriignally the device hosted a webpage which was accessable on the LAN that it was connected to, but this was a bit annoyting because I had to open a browers and wait for the web page to load everytime I wanted to chnanged the state of the device. I then found out about the MQTT protocol and Node-Red, check them out if you have not heared of them.
+
+MQTT is basically a light weight communcation protocol which is perfect for home automation deivce.
+
+Node-Red is a flow-based developement tool which is also great for home automation, you can interface almost anything to it, most notably MQTT and Homebridge.
+
+Homebridge allows you to create custom devices that will show up in the iOS/Mac OS Homekit program, this is how I ended up controlling this device. In Homekit the device shows up as 2 dimable light bulbs.
+
+Node-Red also allows you to interface a Telegram bot. So you can control almost anything in your home via the bot, for example if some over current/temperature is detected. Node-Red can send me a message via telegram notifying me.
 
 
 
@@ -10,24 +20,27 @@ This device has 3 microcontrollers.
 2. An Arduino Nano considered as the "Sensor" controller. It collects all the recorded temperatures in the Light Dimmer, it also captures the consumed current of the deivce and pushed these values to the ESP8266.
 3.  Another Arduino Nano considered as the "Triac" controller. It recieves a Zero-Cross signal and then calcualtes the trigger times for each Triac based of the desiered power.
 
+All 3 controllers are interconnected via I2C.
+
 The block diagrma below desribes the main interconnections in the device.
 
 <img src="/Images/Block-diagram.png" width=55%>
 
--
--
--
--
--
--
--
--
--
--
 
-All 3 controllers are interconnected via I2C.
+
 
 ## uController PCB
+Here we cna view the uController PCB that connects all 3 micro-controllers
+
+This board has the following
+
+- ESP8266
+- 2x Arduino Nanos
+- 4 LED connectors
+- Connector to the Power Control PCB
+- Connector to the Triac PCB
+- 12[V] connector
+- A buck PSU which supplys a 5[V] from 12[V], originally there was a 7805 but after a few months of running it I discovered that it got really hot. I had a choice between adding a headsink or put a buck converter in palce of the LDO. The buck converter seemed like a better idea since there would be not heat. Luckly there was enough space to mount it on the board.
 
 <img src="/Images/voltage_regulator_mod.JPG" width=55%>
 
@@ -36,7 +49,17 @@ All 3 controllers are interconnected via I2C.
 <img src="/Images/IMG_0307.JPG" width=55%>
 
 ## Power Control PCB
+Here we can view the Power Control PCB. The Power control PCB hold the following
 
+- Control Relays that will completlying disconnect the Live and Neutral when the Output is on the "off" state.
+- an ACS712 for current sensing
+- 
+
+To the top left you can see the switch mode PSU that proivde the 12[V] rail for the system
+
+To the top right you can see a EMI filter.
+
+And lastly at the bottom of the enclouse you can see the Power Control Board.
 
 
 <img src="/Images/Power_control_and_PSU_and_filter.JPG" width=55%>
