@@ -74,7 +74,7 @@ And lastly at the bottom of the enclouse you can see the Power Control Board.
 
 1. The Inductors L1, L2, L3 and L4 do not have enough indutance to fully supress the inrush current of the Bulbs. I did no maths when implementing these inductors. I simply bought the biggest inductors that were avaliable at my local electronics store. I would recommend finding an inductor with a value closer to 1[H] with a current rating of 6[A] minimum.
 
-2. The Inductors L1 and L3, L2 and L4 are in series, which reduces the current between the inductors by half, this was done to reduce the amount of heat that each inductor would emit but, doing so reduces the indutance by half.
+2. The Inductors L1 and L3, L2 and L4 are in parralle, which reduces the current between the inductors by half, this was done to reduce the amount of heat that each inductor would emit but, doing so reduces the indutance by half.
 
 3. The temperatue sensors are interfaced with a One-Wire Interface. With 6 of these sensors alot of electrical noise is generated when communcating with them. This noise is somehow probgated to the cut sinusoid and an udable ringing noise is appartent, which emits from the bulbs. I have not investigated ways to emit or evening reduce this "electrical/audioable" noise. But maybe reducing the clock speed of the One-Wire bus could help. After speaking to a Professor about this issue, he mentioned that my track layout on the PCB is most likley the issue. If I create another revision of this project I would most likley change the tempeature sensors to some thermocouples or thermistors and have a mutliplex and opamp to measure the tempatures. 
 
