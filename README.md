@@ -2,14 +2,17 @@
 
 In this project I have designed a dual trailing edge phase dimmer using a Triac as the main switching component. 
 
-<img src="/Images/Control_via_Ipad.gif" align="right"
-     alt="Dimmer GIF" width=30% height=10% >
+
 
 This device has 3 microcontrollers.
 
-1. An ESP8266 which handles the WiFi communication such as sending and recvied data to and from a MQTT server.
+1. An ESP8266 which handles the WiFi communication such as connecting to a MQTT server and sending/reciveing data to and from that server.
 2. An Arduino Nano considered as the "Sensor" controller. It collects all the recorded temperatures in the Light Dimmer, it also captures the consumed current of the deivce and pushed these values to the ESP8266.
 3.  Another Arduino Nano considered as the "Triac" controller. It recieves a Zero-Cross signal and then calcualtes the trigger times for each Triac based of the desiered power.
+
+The block diagrma below desribes the main interconnections in the device.
+
+<img src="/Images/Block-diagram.png" width=55%>
 
 -
 -
@@ -26,7 +29,11 @@ All 3 controllers are interconnected via I2C.
 
 ## uController PCB
 
+<img src="/Images/voltage_regulator_mod.JPG" width=55%>
+
 ## Triac PCB
+
+<img src="/Images/IMG_0307.JPG" width=55%>
 
 ## Power Control PCB
 
@@ -48,9 +55,10 @@ This project began before I started my education in electrical engineering and I
 While browing a local elecrtronics store in their "kits" sections I found a "speed control" circuit for motors that used 220VAC as an input.
 
 
+<img src="/Images/Control_via_Ipad.gif" align="right"
+     alt="Dimmer GIF" width=30% height=10% >
 
 <img src="/Images/Control_via_Ipad.gif" width=60%>
 
-<img src="/Images/Block-diagram.png" width=30%>
 
-<img src="/Images/voltage_regulator_mod.JPG" width=40%>
+
