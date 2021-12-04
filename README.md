@@ -37,10 +37,12 @@ All 3 controllers are interconnected via I2C.
 
 ## Power Control PCB
 
-<img src="/Images/IMG_0294.JPG" width=55%>
 
 
-Notes:
+<img src="/Images/Power_control_and_PSU_and_filter.JPG" width=55%>
+
+
+## Notes
 
 1. The Inductors L1, L2, L3 and L4 do not have enough indutance to fully supress the inrush current of the Bulbs. I did no maths when implementing these inductors. I simply bought the biggest inductors that were avaliable at my local electronics store. I would recommend finding an inductor with a value closer to 1[H] with a current rating of 6[A] minimum.
 
