@@ -89,7 +89,7 @@ The Power control PCB holds the following
 Here we can see the dimmer interface with a website.
 The website a very responsive and the values were updated via a websocket, so the web page did not have to refesh inorder to get new data.
 
-<img src="/Images/Control_via_Ipad.gif" width=60%>
+<img src="/Images/Control_via_Ipad.gif" width=55%>
 
 
 
