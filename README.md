@@ -95,6 +95,10 @@ The website a very responsive and the values were updated via a websocket, so th
 
 <img src="/Images/Complete_Unit.JPG" width=55%>
 
+<img src="/Images/Testing.gif" width=55%>
+
+
+
 
 
 
