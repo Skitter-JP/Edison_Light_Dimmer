@@ -2,22 +2,20 @@
 
 In this project I have designed a dual trailing edge phase dimmer using a Triac as the main switching component.
 
-Oriignally the device hosted a webpage which was accessable on the LAN that it was connected to, but this was a bit annoyting because I had to open a browers and wait for the web page to load everytime I wanted to chnanged the state of the device. I then found out about the MQTT protocol and Node-Red, check them out if you have not heared of them.
+Oriignally the device hosted a webpage which was accessable on the LAN that it was connected to, but this was a bit annoying because I had to open a browser and wait for the web page to load everytime I wanted to chnanged the state of the device. I then discovered the MQTT protocol and Node-Red. check them out if you have not heared of them.
 
-MQTT is basically a light weight communcation protocol which is perfect for home automation deivce.
+MQTT is basically a light weight communcation protocol which is perfect for microcontrollers.
 
 Node-Red is a flow-based developement tool which is also great for home automation, you can interface almost anything to it, most notably MQTT and Homebridge.
 
 Homebridge allows you to create custom devices that will show up in the iOS/Mac OS Homekit program, this is how I ended up controlling this device. In Homekit the device shows up as 2 dimable light bulbs.
 
-Node-Red also allows you to interface a Telegram bot. So you can control almost anything in your home via the bot, for example if some over current/temperature is detected. Node-Red can send me a message via telegram notifying me.
-
-
+Node-Red also allows you to interface a Telegram bot. So, you can control almost anything in your home via the bot, for example if some over current/temperature is detected in the light dimmer, Node-Red can send me a message via telegram notifying me.
 
 This device has 3 microcontrollers.
 
-1. An ESP8266 which handles the WiFi communication such as connecting to a MQTT server and sending/reciveing data to and from that server.
-2. An Arduino Nano considered as the "Sensor" controller. It collects all the recorded temperatures in the Light Dimmer, it also captures the consumed current of the deivce and pushed these values to the ESP8266.
+1. An ESP8266 which handles the WiFi communication such as connecting to a Wifi Network, connecting MQTT server and sending/reciveing data to and from that server.
+2. An Arduino Nano considered as the "Sensor" controller. It collects all the recorded temperatures in the Light Dimmer, it also captures the consumed current of the deivce and pushes these values to the ESP8266.
 3.  Another Arduino Nano considered as the "Triac" controller. It recieves a Zero-Cross signal and then calcualtes the trigger times for each Triac based of the desiered power.
 
 All 3 controllers are interconnected via I2C.
@@ -26,11 +24,8 @@ The block diagrma below desribes the main interconnections in the device.
 
 <img src="/Images/Block-diagram.png" width=55%>
 
-
-
-
 ## uController PCB
-Here we cna view the uController PCB that connects all 3 micro-controllers
+Here we can view the uController PCB that connects all 3 micro-controllers
 
 This board has the following
 
@@ -46,29 +41,38 @@ This board has the following
 
 ## Triac PCB
 
-<img src="/Images/IMG_0307.JPG" width=55%>
+Here we can view the Triac PCB mounted to the enclouser, the uController PCB is also visable.
 
+This board conisits of the High and Low Voltage side, where the high voltage side has 220VAC that will be cut by the Triacs and the low voltage side has optocouplers which trigger those Triacs.
+
+The circuit is quite basic and a full discription can be found [here](http://www.soloelectronica.net/PDF/moc3020.pdf) and a super basic diagram can be found [here](http://www.soloelectronica.net/PDF/moc3020.pdf)
+
+These photos were taken while I was assembling the device, that is why some components are missing.
+
+<img src="/Images/IMG_0307.JPG" width=55%>
 
 <img src="/Images/Triac_Board_Unpopulated.JPG" width=55%>
 
-
-
 ## Power Control PCB
-Here we can view the Power Control PCB. The Power control PCB hold the following
-
-- Control Relays that will completlying disconnect the Live and Neutral when the Output is on the "off" state.
-- an ACS712 for current sensing
-- 
+Here we can view the Power Control PCB.
 
 To the top left you can see the switch mode PSU that proivde the 12[V] rail for the system
 
 To the top right you can see a EMI filter.
 
-And lastly at the bottom of the enclouse you can see the Power Control Board.
+And lastly at the bottom of the enclouser you can see the Power Control Board.
 
+The Power control PCB holds the following
+
+- Control Relays that will completly disconnect the Live and Neutral when the output is off.
+- an ACS712 for current sensing
+- 2 pairs of inductors for current limiting.
+- Zero cross detection circuit
+- Fuses on the Live and Neutral lines
 
 <img src="/Images/Power_control_and_PSU_and_filter.JPG" width=55%>
 
+<img src="/Images/IMG_0294.JPG" width=55%>
 
 ## Notes
 
@@ -80,17 +84,13 @@ And lastly at the bottom of the enclouse you can see the Power Control Board.
 
 4. Implememting 3 uControllers is diffenetly over kill but it makes things much easier when programing these devices. If I would put everything onto the ESP8266 it would be more difficuilt to code since I would have to think about all the different types of interupts that would occur when dealing with the Wifi, Triacs, Zero-Crossing, One-Wire ciruits, etc. The Wifi libary is a huge black box that just works. I did not want to spend time diving into the Wifi library to see how I could make things more efficant.
 
-This project started when I was gifted 4 tungenten edison light bulbs, after thinking what I should do with them I came to the conclusion that I need 16 more of them and make a cendelaere like display of lights, but the true magic of these light bulbs are only apparent when they are running at around 20% of their rated power.
+## Pictures and Discriptions
 
-This project began before I started my education in electrical engineering and I did not know much about reducing/limiting the power to any type of load.
-
-While browing a local elecrtronics store in their "kits" sections I found a "speed control" circuit for motors that used 220VAC as an input.
-
-
-<img src="/Images/Control_via_Ipad.gif" align="right"
-     alt="Dimmer GIF" width=30% height=10% >
+Here we can see the dimmer interface with a website.
+The website a very responsive and the values were updated via a websocket, so the web page did not have to refesh inorder to get new data.
 
 <img src="/Images/Control_via_Ipad.gif" width=60%>
+
 
 
 
