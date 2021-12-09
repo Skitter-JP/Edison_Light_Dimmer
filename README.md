@@ -48,6 +48,12 @@ This board conisits of the High and Low Voltage side, where the high voltage sid
 
 The circuit is quite basic and a full discription can be found [here](http://www.soloelectronica.net/PDF/moc3020.pdf) and a super basic diagram can be found [here](http://www.soloelectronica.net/PDF/moc3020.pdf)
 
+This board has the following
+
+-2x Triac Circuits with RC snubers and MOVs for voltage spikes
+- A low voltage connector suppliny a 5[V] rail, Ground, One-Wire and 2 Trigger lines for the optocouplers, this connector goes to the uController PCB.
+- A high voltage connector that has 220[VAC] input and the reutrn chopped sinewave. This connector goes to the Power Control PCB.
+
 These photos were taken while I was assembling the device, that is why some components are missing.
 
 <img src="/Images/IMG_0307.JPG" width=55%>
@@ -72,6 +78,8 @@ The Power control PCB holds the following
 - Fuses on the Live and Neutral lines
 
 <img src="/Images/Power_control_and_PSU_and_filter.JPG" width=55%>
+
+Here I was fitting the heatsinks to the board, the two outer screws hold the heatsink to the board, the one inner screw has a threaded hole and couples the Triac to the heatsink.
 
 <img src="/Images/IMG_0294.JPG" width=55%>
 
@@ -113,6 +121,6 @@ Note the "soft start" of the bulb, theroitcally this can dramatically increase t
 
 ## Orders
 
-If you would like a complete unit built and programmed this can be arranged for the right price.
+If you would like a complete unit built and delivered this can be arranged for the right price.
 
 Please contact me if you are interested.
