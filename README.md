@@ -1,6 +1,11 @@
 # Edison Light Dimmer
 
 
+<img src="/Images/IMG_2473.JPG" align="right"
+     alt="CVUT Logo" width=40% height=40%>
+     
+     
+
 In this project I have designed a dual trailing edge phase dimmer using a Triac as the main switching component.
 
 Orignally the device hosted a webpage which was accessable on the LAN that it was connected to, but this was a bit annoying because I had to open a browser and wait for the web page to load everytime I wanted to chnanged the state of the device. I then discovered the MQTT protocol and Node-Red. check them out if you have not heared of them.
