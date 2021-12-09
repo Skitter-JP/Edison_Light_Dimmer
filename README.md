@@ -15,11 +15,16 @@ Node-Red is a flow-based developement tool which is also great for home automati
 
 Homebridge allows you to create custom devices that will show up in the iOS/Mac OS Homekit program, this is how I ended up controlling this device. In Homekit the device shows up as 2 dimable light bulbs.
 
-<img src="/Images/mqtt_logo.png" align="right"
-     alt="mqtt" width=20%> 
-     
+
+ <img src="/Images/mqtt_logo.png" align="right"
+     alt="mqtt" width=20%>     
+
 <img src="/Images/home-kit.jpg" align="right"
-     alt="mqtt" width=25%> 
+     alt="mqtt" width=20%>     
+
+
+     
+
 
 Node-Red also allows you to interface a Telegram bot. So, you can control almost anything in your home via the bot, for example if some over current/temperature is detected in the light dimmer, Node-Red can send me a message via telegram notifying me.
 
@@ -28,6 +33,8 @@ This device has 3 microcontrollers.
 1. An ESP8266 which handles the WiFi communication such as connecting to a Wifi Network, connecting MQTT server and sending/reciveing data to and from that server.
 2. An Arduino Nano considered as the "Sensor" controller. It collects all the recorded temperatures in the Light Dimmer, it also captures the consumed current of the deivce and pushes these values to the ESP8266.
 3.  Another Arduino Nano considered as the "Triac" controller. It recieves a Zero-Cross signal and then calcualtes the trigger times for each Triac based of the desiered power.
+
+
 
 All 3 controllers are interconnected via I2C.
 
