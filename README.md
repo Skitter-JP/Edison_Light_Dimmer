@@ -2,8 +2,7 @@
 
 
 <img src="/Images/IMG_2473.JPG" align="right"
-     alt="CVUT Logo" width=40% height=40%>
-     
+     alt="lights_intro" width=40% >
      
 
 In this project I have designed a dual trailing edge phase dimmer using a Triac as the main switching component.
@@ -15,6 +14,12 @@ MQTT is basically a light weight communcation protocol which is perfect for micr
 Node-Red is a flow-based developement tool which is also great for home automation, you can interface almost anything to it, most notably MQTT and Homebridge.
 
 Homebridge allows you to create custom devices that will show up in the iOS/Mac OS Homekit program, this is how I ended up controlling this device. In Homekit the device shows up as 2 dimable light bulbs.
+
+<img src="/Images/mqtt_logo.png" align="right"
+     alt="mqtt" width=20%> 
+     
+<img src="/Images/home-kit.jpg" align="right"
+     alt="mqtt" width=25%> 
 
 Node-Red also allows you to interface a Telegram bot. So, you can control almost anything in your home via the bot, for example if some over current/temperature is detected in the light dimmer, Node-Red can send me a message via telegram notifying me.
 
