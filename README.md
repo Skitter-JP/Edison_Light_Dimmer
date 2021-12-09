@@ -20,7 +20,10 @@ Homebridge allows you to create custom devices that will show up in the iOS/Mac 
      alt="mqtt" width=20%>     
 
 <img src="/Images/home-kit.jpg" align="right"
-     alt="mqtt" width=20%>     
+     alt="mqtt" width=20%>  
+     
+<img src="/Images/node_red.png" align="right"
+     alt="mqtt" width=20%>  
 
 
      
@@ -67,7 +70,7 @@ The circuit is quite basic and a full discription can be found [here](http://www
 
 This board has the following
 
--2x Triac Circuits with RC snubers and MOVs for voltage spikes
+- 2x Triac Circuits with RC snubers and MOVs for voltage spikes
 - A low voltage connector suppliny a 5[V] rail, Ground, One-Wire and 2 Trigger lines for the optocouplers, this connector goes to the uController PCB.
 - A high voltage connector that has 220[VAC] input and the reutrn chopped sinewave. This connector goes to the Power Control PCB.
 
