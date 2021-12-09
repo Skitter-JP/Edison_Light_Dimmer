@@ -1,8 +1,9 @@
 # Edison Light Dimmer
 
+
 In this project I have designed a dual trailing edge phase dimmer using a Triac as the main switching component.
 
-Oriignally the device hosted a webpage which was accessable on the LAN that it was connected to, but this was a bit annoying because I had to open a browser and wait for the web page to load everytime I wanted to chnanged the state of the device. I then discovered the MQTT protocol and Node-Red. check them out if you have not heared of them.
+Orignally the device hosted a webpage which was accessable on the LAN that it was connected to, but this was a bit annoying because I had to open a browser and wait for the web page to load everytime I wanted to chnanged the state of the device. I then discovered the MQTT protocol and Node-Red. check them out if you have not heared of them.
 
 MQTT is basically a light weight communcation protocol which is perfect for microcontrollers.
 
@@ -76,14 +77,21 @@ The Power control PCB holds the following
 
 ## Pictures and Discriptions
 
-Here we can see the dimmer interface with a website.
-The website a very responsive and the values were updated via a websocket, so the web page did not have to refesh inorder to get new data.
+Here we can see the dimmer interface with a website hosted on the ESP.
+The website is very responsive and the values were updated via a websocket, therfor the web page did not have to refesh inorder to get new data. But loading the website took a few seconds which was quite annouying
 
 <img src="/Images/Control_via_Ipad.gif" width=55%>
 
+Here I was testing the trigger singals for the Triac vs the Zero Cross Signal
+
 <img src="/Images/Testing_with_Scope.JPG" width=55%>
 
+Here is ther complete unit although the Temperature sensors have not yet been installed
+
 <img src="/Images/Complete_Unit.JPG" width=55%>
+
+Here is a basic deminstartion of the dimmer turning a single bulb on and off.
+Note the "soft start" of the bulb, theroitcally this can dramatically increase the life span of the bulbs.
 
 <img src="/Images/Testing.gif" width=55%>
 
@@ -95,4 +103,16 @@ The website a very responsive and the values were updated via a websocket, so th
 
 3. The temperatue sensors are interfaced with a One-Wire Interface. With 6 of these sensors alot of electrical noise is generated when communcating with them. This noise is somehow probgated to the cut sinusoid and an udable ringing noise is appartent, which emits from the bulbs. I have not investigated ways to emit or evening reduce this "electrical/audioable" noise. But maybe reducing the clock speed of the One-Wire bus could help. After speaking to a Professor about this issue, he mentioned that my track layout on the PCB is most likley the issue. If I create another revision of this project I would most likley change the tempeature sensors to some thermocouples or thermistors and have a mutliplex and opamp to measure the tempatures. 
 
-4. Implememting 3 uControllers is diffenetly over kill but it makes things much easier when programing these devices. If I would put everything onto the ESP8266 it would be more difficuilt to code since I would have to think about all the different types of interupts that would occur when dealing with the Wifi, Triacs, Zero-Crossing, One-Wire ciruits, etc. The Wifi libary is a huge black box that just works. I did not want to spend time diving into the Wifi library to see how I could make things more efficant.
+4. Implememting 3 uControllers is diffenetly over kill but it makes things much easier when programing these devices. If I would put everything onto the ESP8266 it would be more challanging to code since I would have to think about all the different types of interupts that would occur when dealing with the Wifi, Triacs, Zero-Crossing, One-Wire, etc. The Wifi libary is a huge black box that just works. I did not want to spend time diving into the Wifi library to see how I could make things more efficant.
+
+5. Almost all these compomenets (enclouser, heatsinks, relays, EMI filter, PSU) were purchased from gme.cz 
+
+6. The ESP8266 comes in different sizes, if you do plan to frabicate the PCBs ensure you buy the correct ESP8266 board.
+
+7. The Code provided requires a MQTT server on the LAN it connects to, in the WiFi_code you can find the topics which the board will be publishing and subscrided to.
+
+## Orders
+
+If you would like a complete unit built and programmed this can be arranged for the right price.
+
+Please contact me if you are interested.
