@@ -51,6 +51,8 @@ This board has the following
 - 12[V] connector
 - A buck PSU which supply’s a 5[V] from 12[V], originally there was a 7805 but after a few months of running it I discovered that it got hot. I had a choice between adding a head sink or put a buck converter in place of the LDO. The buck converter seemed like a better idea since there would be not heat. Luckily there was enough space to mount it on the board.
 
+<img src="/Images/Logic_PCB_Top_Bottom_Layout.JPG" width=55%>
+
 <img src="/Images/voltage_regulator_mod.JPG" width=55%>
 
 ## Triac PCB
@@ -68,6 +70,8 @@ This board has the following
 - A high voltage connector that has 220[VAC] input and the return chopped sinewave. This connector goes to the Power Control PCB.
 
 These photos were taken while I was assembling the device, that is why some components are missing.
+
+<img src="/Images/Triac_PCB_Top_Bottom_Layout.JPG" width=55%>
 
 <img src="/Images/IMG_0307.JPG" width=55%>
 
@@ -89,6 +93,8 @@ The Power control PCB holds the following
 - 2 pairs of inductors for current limiting.
 - Zero cross detection circuit
 - Fuses on the Live and Neutral lines
+
+<img src="/Images/Power_control_PCB_Top_Bottom_Layout.JPG" width=55%>
 
 <img src="/Images/Power_control_and_PSU_and_filter.JPG" width=55%>
 
