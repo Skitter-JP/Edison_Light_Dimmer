@@ -73,9 +73,9 @@ These photos were taken while I was assembling the device, that is why some comp
 
 <img src="/Images/Triac_PCB_Top_Bottom_Layout.JPG" width=55%>
 
-<img src="/Images/IMG_0307.JPG" width=55%>
-
 <img src="/Images/Triac_Board_Unpopulated.JPG" width=55%>
+
+<img src="/Images/IMG_0307.JPG" width=55%>
 
 ## Power Control PCB
 Here we can view the Power Control PCB.
