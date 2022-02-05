@@ -96,7 +96,7 @@ The Power control PCB holds the following
 
 <img src="/Images/Power_control_PCB_Top_Bottom_Layout.JPG" width=55%>
 
-<img src="/Images/Power_control_and_PSU_and_filter.JPG" width=55%>
+<img src="/Images/Power_control_and_PSU_and_filter_rotated.JPG" width=55%>
 
 Here I was fitting the heatsinks to the board, the two outer screws hold the heatsink to the board, the one inner screw has a threaded hole and couples the Triac to the heatsink.
 
