@@ -113,7 +113,7 @@ Here I was testing the trigger signals for the Triac vs the Zero Cross Signal
 
 <img src="/Images/Testing_with_Scope.JPG" width=55%>
 
-Here is the complete unit although the yemperature sensors have not yet been installed
+Here is the complete unit although the temperature sensors have not yet been installed
 
 <img src="/Images/Complete_Unit.JPG" width=55%>
 
